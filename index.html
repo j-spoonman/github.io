@@ -1,70 +1,95 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html>
 <head>
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-PSJQMST');</script>
-<!-- End Google Tag Manager -->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://html5-templates.com/" />
-    <title>Responsive HTML5 Page Layout Template</title>
-    <meta name="description" content="Simple HTML5 Page layout template with header, footer, sidebar etc.">
-    <link rel="stylesheet" href="style.css">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144494548-1-OFF"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+	<title>My Interests</title>
+	<style>
+		/* Define the styles for the tabs */
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #f1f1f1;
+		}
 
-		gtag('config', 'UA-144494548-1-OFF');
-	</script>
-    <script src="script.js"></script>
+		/* Style the buttons inside the tab */
+		.tab button {
+			background-color: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
+		}
+
+		/* Change background color of the active button */
+		.tab button.active {
+			background-color: #ccc;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+			border: 1px solid #ccc;
+			border-top: none;
+		}	
+		
+	</style>
 </head>
-<body>	
-	<section>
-		<!-- <strong>Demonstration of a simple page layout using HTML5 tags: header, nav, section, main, article, aside, footer, address.</strong> -->
-		<strong>Simple Test Site</strong>
-	</section>
-	<section id="pageContent">
-		<main role="main">
-			<article>
-				<h2>G4 Tag Tester</h2>
-				<!-- <p>Lorem ipsum dolor sit amet, nonumes voluptatum mel ea, cu case ceteros cum. Novum commodo malorum vix ut. Dolores consequuntur in ius, sale electram dissentiunt quo te. Cu duo omnes invidunt, eos eu mucius fabellas. Stet facilis ius te, quando voluptatibus eos in. Ad vix mundi alterum, integre urbanitas intellegam vix in.</p> -->
-			</article>
-			<!-- <article>
-				<h2>Illud mollis moderatius</h2>
-				<p>Eum facete intellegat ei, ut mazim melius usu. Has elit simul primis ne, regione minimum id cum. Sea deleniti dissentiet ea. Illud mollis moderatius ut per, at qui ubique populo. Eum ad cibo legimus, vim ei quidam fastidii.</p>
-			</article>
-			<article>
-				<h2>Ex ignota epicurei quo</h2>
-				<p>Quo debet vivendo ex. Qui ut admodum senserit partiendo. Id adipiscing disputando eam, sea id magna pertinax concludaturque. Ex ignota epicurei quo, his ex doctus delenit fabellas, erat timeam cotidieque sit in. Vel eu soleat voluptatibus, cum cu exerci mediocritatem. Malis legere at per, has brute putant animal et, in consul utamur usu.</p>
-			</article>
-			<article>
-				<h2>His at autem inani volutpat</h2>
-				<p>Te has amet modo perfecto, te eum mucius conclusionemque, mel te erat deterruisset. Duo ceteros phaedrum id, ornatus postulant in sea. His at autem inani volutpat. Tollit possit in pri, platonem persecuti ad vix, vel nisl albucius gloriatur no.</p>
-			</article> -->
-		</main>
-		<aside>
-			<!-- <div>Sidebar 1</div>
-			<div>Sidebar 2</div>
-			<div>Sidebar 3</div> -->
-		</aside>
-	</section>
-	<footer>
-		<!-- <p>&copy; You can copy, edit and publish this template but please leave a link to our website | <a href="https://html5-templates.com/" target="_blank" rel="nofollow">HTML5 Templates</a></p>
-		<address>
-			Contact: <a href="mailto:me@example.com">Mail me</a>
-		</address> -->
-	</footer>
+<body>
+	<h1>My Interests</h1>
 
+	<!-- Create the tabs -->
+	<div class="tab">
+		<button class="tablinks bordered-button" onclick="openTab(event, 'Tab1')" style="border: 1px solid black;">Udemy</button>
+		<button class="tablinks bordered-button" onclick="openTab(event, 'Tab2')" style="border: 1px solid black;">Tab 2</button>
+		<button class="tablinks bordered-button" onclick="openTab(event, 'Tab3')" style="border: 1px solid black;">Tab 3</button>		
+	</div>
 
+	<!-- Create the tab content -->
+	<div id="Tab1" class="tabcontent">
+		<h2>Current Courses</h2>
+		<p><a href="https://www.udemy.com/course/docker-for-net-and-angular-developers/?kw=Docker+%26+Kubernetes+for+.Net+and+Angular+Developers&src=sac&subs_filter_type=subs_only" target="_blank">Docker & Kubernetes for .Net and Angular Developers</a>
+		<br><a href="https://www.udemy.com/course/asp-net-core-true-ultimate-guide-real-project/learn/lecture/34524812#overview" target="_blank">
+		Asp.Net Core 7 (.NET 7) | True Ultimate Guide</a>
+		<br><a href="https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/learn/lecture/22400262#overview" target="_blank">
+		Build an app with ASPNET Core and Angular from scratch<a>
+		<br><a href="https://www.udemy.com/course/complete-csharp-masterclass/learn/lecture/9566528#overview" target="_blank">
+		Complete C# Masterclass<a>
+		<br><a href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22628657#overview" target="_blank">
+		The Complete JavaScript Course 2023: From Zero to Expert!<a>
+		</p>
+	</div>
+
+	<div id="Tab2" class="tabcontent">
+		<h2>Tab 2 Content</h2>
+		<p>Nullam viverra ante in ex congue, nec consectetur massa vestibulum. Curabitur quis dapibus metus. Donec sit amet malesuada lectus. Nulla facilisi. Sed sed turpis nec quam fringilla hendrerit non quis metus.</p>
+	</div>
+
+	<div id="Tab3" class="tabcontent">
+		<h2>Tab 3 Content</h2>
+		<p>Maecenas euismod nisl nec tellus lacinia consequat. Suspendisse blandit velit et neque aliquet, sit amet faucibus turpis efficitur. Vivamus condimentum, lectus a ultricies interdum, nisl urna elementum quam, quis pharetra enim lacus id est.</p>
+	</div>
+
+	<script>
+		// Open the default tab on page load
+		document.getElementById("Tab1").style.display = "block";
+
+		// Handle tab switching
+		function openTab(evt, tabName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(tabName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
 </body>
-
 </html>
+
