@@ -10,7 +10,8 @@
 		.tab {
 			overflow: hidden;
 			border: 1px solid #ccc;
-			background-color: #f1f1f1;
+			background-color: #f1f1f1; 
+			background-color: transparent;
 		}
 
 		/* Style the buttons inside the tab */
@@ -22,7 +23,8 @@
 			cursor: pointer;
 			padding: 14px 16px;
 			transition: 0.3s;
-			border-radius: 10px; /* Add this line to round the corners */
+			border-radius: 10px; 
+			margin: 5px;
 		}
 
 		/* Change background color of the active button */
@@ -42,11 +44,28 @@
   			display: grid;
   			grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
   			grid-gap: 5px; /* Optional gap between columns */
-		}		
+		}
+		#work-heading {
+        text-align: center;
+		font-family: "Comic Sans MS", sans-serif;
+    	}
+
+		h2 {
+       		font-family: "Palatino Linotype", sans-serif;
+			margin-bottom: 1px;
+    	}
+		h3 {
+        margin-bottom: 1px;
+    	}
+
+    	a {
+        margin-top: 1px;
+    	}
+</style>
 	</style>
 </head>
 <body>	
-	<h1 style="margin-right: 20px;">Work Stuff</h1>	
+	<h1 id="work-heading" style="margin-right: 20px;">Work Stuff</h1>	
 	<!-- Create the tabs -->
 	<div class="tab">
 		<button class="tablinks bordered-button" onclick="openTab(event, 'Tab1')" style="border: 1px solid black;">Udemy</button>
@@ -54,8 +73,9 @@
 		<button class="tablinks bordered-button" onclick="openTab(event, 'Tab3')" style="border: 1px solid black;">CRM Links</button>
 		<button class="tablinks bordered-button" onclick="openTab(event, 'Tab4')" style="border: 1px solid black;">Google Analytics</button>
 		<button class="tablinks bordered-button" onclick="openTab(event, 'Tab5')" style="border: 1px solid black;">WPEngine</button>
-		<button class="tablinks bordered-button" onclick="openTab(event, 'Tab6')" style="border: 1px solid black;">AI</button>			
-	</div>
+		<button class="tablinks bordered-button" onclick="openTab(event, 'Tab6')" style="border: 1px solid black;">AI</button>
+		<button class="tablinks bordered-button" onclick="openTab(event, 'Tab7')" style="border: 1px solid black;">Online Tools</button>			
+	</div>	
 	<!-- Create the tab content -->
 	<div id="Tab4" class="tabcontent">
 		<h2>Google Analytics</h2>
@@ -74,13 +94,21 @@
 		</p>
 	</div>
 	<div id="Tab6" class="tabcontent">
-		<h2>WPEngine</h2>
-		<img src="ChatGBT.png" alt="ChatGPT">
+		<h2>AI Tools</h2>
+		<img src="images/ChatGBT.png" alt="ChatGPT">
 		<p><a href="https://chat.openai.com/" target="_blank">ChatGBT</a>
 		<br><a href="https://bard.google.com/" target="_blank">Bard</a>
-		<br><a href="https://www.bing.com/search?showconv=1&sendquery=1&form=MA13G9&ocid=MY02CD&q=I%20need%20to%20throw%20a%20dinner%20party%20for%206%20people%20who%20are%20vegetarian.%20Can%20you%20suggest%20a%203-course%20menu%20with%20a%20chocolate%20dessert%3F&pl=launch" target="_blank">Bing</a>
+		<br><a href="https://www.microsoft.com/en-us/edge/launch/bing-chat-paywall?form=MA13G9&q=I%20need%20to%20throw%20a%20dinner%20party%20for%206%20people%20who%20are%20vegetarian.%20Can%20you%20suggest%20a%203-course%20menu%20with%20a%20chocolate%20dessert%3F" target="_blank">Bing</a>
 		</p>
-	</div>	
+	</div>
+	<div id="Tab7" class="tabcontent">
+		<img src="images/Calculator.png" alt="Calculator">
+		<h2>Online Tools</h2>			
+		<p><a href="https://meyerweb.com/eric/tools/dencoder/" target="_blank">URL Decoder/Encoder</a>	
+		<br><a href="https://www.calculator.net/time-calculator.html" target="_blank">Time Calculator</a>
+		<br><a href="https://savvytime.com/converter/" target="_blank">UTC Converter</a>	
+		</p>				
+	</div>		
 	<div id="Tab1" class="tabcontent">
 		<img src="images/Udemy.png" alt="Udemy">
 		<h2>Current Courses</h2>
@@ -96,17 +124,21 @@
 		</p>
 	</div>
 	<div id="Tab2" class="tabcontent">
-		<img src="images/LanguageLogo.png" alt="Udemy">
+		<img src="images/LanguageLogo.png" alt="LanguageLogo">
 		<h2>Programing Guides</h2>
 		<p><a href="https://htmlcheatsheet.com/" target="_blank">Cheat Sheets</a>
-		</p>
+		<br><a href="https://www.tutorialspoint.com/javascript/index.htm" target="_blank">Language Tutorials</a>
+		<br><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
+		<br><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/comment-your-javascript-code" target="_blank">Javascript Algorithms</a>
+		</p>		
 	</div>
 	<div id="Tab3" class="tabcontent">
+		<br>
 		<div class="grid-container">
 			<img src="images/Google-Optimization-Suite.jpg" alt="Google Optimization Suite">
 			<img src="images/rescore2.jpg" alt="Rescore on mobile">
 			<img src="images/womantechatcomputer.jpg" alt="Woman technician at computer">
-		</div>		
+		</div>				
 		<div class="grid-container">			
 			<div><h2>Production URLs</h2>
 				<p>
@@ -124,7 +156,7 @@
 					<br><a href="https://daws.mitchell1.com/DataAcquisitionWebService.asmx" target="_blank">DAWS</a>
 					<br><a href="https://www.m1socialcrm.com" target="_blank">www.m1socialcrm.com</a>
 					<br><a href="https://crm.mitchell1.com/" target="_blank">crm.mitchell1.com</a>
-					<br><a href="https://onlineappointments.mitchell1.com" target="_blank">appointments.mitchell1.com</a>
+					<br><a href="https://onlineappointments.mitchell1.com/?cloudid=8E900C0B-2F87-4A9F-91E8-AC1775594EF0&preview=False&hasTexting=True" target="_blank">appointments.mitchell1.com</a>
 					<br><a href="https://www.mitchell1crm.com/CrmUtilities/ClientDownload.aspx" target="_blank">CDAP Download</a>
 					<br><a href="https://powc-ssrs-01-pp/Rpt_CORP02_2016/browse/CRM%20OAS%20Reports" target="_blank">Agent Reports</a>
 					<br><a href="https://powc-nag-01-pv/m1/pnp4nagios/index.php/special?tpl=msec&view=1" target="_blank">MSEC Nagious</a>
@@ -187,9 +219,9 @@
 					<br><a href="https://10.14.128.241" target="_blank">bridgestoneservice.com</a>
 					<a href="https://10.14.128.229/DataAcquisitionWebService.asmx" target="_blank">DAWS</a>
 					<h3>SANH-IIS-582-PV</h3>
-					<br><a href="https://10.14.128.182" target="_blank">www.m1socialcrm.com</a>
+					<a href="https://10.14.128.182" target="_blank">www.m1socialcrm.com</a>
 					<h3>SANH-IIS-561-PV</h3>
-					<br><a href="https://10.14.128.27/status" target="_blank">Texting Status</a>
+					<a href="https://10.14.128.27/status" target="_blank">Texting Status</a>
 					<h3>SANH-IIS-545-PV</h3>
 					<a href="https://10.14.128.197" target="_blank">crm.mitchell1.com</a>
 					<br><a href="https://10.14.128.145" target="_blank">appointments.mitchell1.com</a>				
@@ -209,11 +241,11 @@
 					<br><a href="https://10.14.128.177/CRMUtilities/Mobile_AppointmentReschedule.aspx?x=4939&a=116060" target="_blank">Mobile Appointment Reschedule</a>		
 					<br><a href="https://10.14.128.231/Security/Index.aspx?" target="_blank">www.ownerautosite.com</a>
 					<br><a href="https://10.14.128.242" target="_blank">bridgestoneservice.com</a>
-					<a href="https://10.14.128.239/DataAcquisitionWebService.asmx" target="_blank">DAWS</a>
+					<br><a href="https://10.14.128.239/DataAcquisitionWebService.asmx" target="_blank">DAWS</a>
 					<h3>SANH-IIS-583-PV</h3>
-					<br><a href="https://10.14.128.22" target="_blank">www.m1socialcrm.com</a>					
+					<a href="https://10.14.128.22" target="_blank">www.m1socialcrm.com</a>					
 					<h3>SANH-ISS-560-PV</h3>
-					<br><a href="https://10.14.128.160/status" target="_blank">Texting Status</a>
+					<a href="https://10.14.128.160/status" target="_blank">Texting Status</a>
 					<h3>SANH-IIS-578-PV</h3>
 					<a href="https://10.14.128.198" target="_blank">crm.mitchell1.com</a>
 					<br><a href="https://10.14.128.178" target="_blank">appointments.mitchell1.com</a>				
@@ -234,10 +266,11 @@
 					<br><a href="https://10.73.109.85/Security/Index.aspx?" target="_blank">www.ownerautosite.com</a>
 					<br><a href="https://10.73.109.87" target="_blank">bridgestoneservice.com</a>
 					<a href="https://10.73.109.86/DataAcquisitionWebService.asmx" target="_blank">DAWS</a>
+					<br>
 					<h3>RDC2-IIS-574-PV</h3>
-					<br><a href="https://10.73.109.174" target="_blank">www.m1socialcrm.com</a>
+					<a href="https://10.73.109.174" target="_blank">www.m1socialcrm.com</a>
 					<h3>RDC2-IIS-575-PV</h3>
-					<br><a href="https://10.73.109.160/status" target="_blank">Texting Status</a>
+					<a href="https://10.73.109.160/status" target="_blank">Texting Status</a>
 					<h3>RDC2-IIS-560-PV</h3>
 					<a href="https://10.73.109.93" target="_blank">crm.mitchell1.com</a>
 					<br><a href="https://10.73.109.175" target="_blank">appointments.mitchell1.com</a>				
@@ -258,10 +291,11 @@
 					<br><a href="https://10.73.109.205/Security/Index.aspx?" target="_blank">www.ownerautosite.com</a>
 					<br><a href="https://10.73.109.91" target="_blank">bridgestoneservice.com</a>
 					<a href="https://10.73.109.92/DataAcquisitionWebService.asmx" target="_blank">DAWS</a>
+					<br>
 					<h3>RDC2-IIS-527-PV</h3>
-					<br><a href="https://10.73.109.127" target="_blank">www.m1socialcrm.com</a>
+					<a href="https://10.73.109.127" target="_blank">www.m1socialcrm.com</a>
 					<h3>RDC2-IIS-576-PV</h3>
-					<br><a href="https://10.73.109.96/status" target="_blank">Texting Status</a>
+					<a href="https://10.73.109.96/status" target="_blank">Texting Status</a>
 					<h3>RDC2-IIS-561-PV</h3>
 					<a href="https://10.73.109.94" target="_blank">crm.mitchell1.com</a>
 					<br><a href="https://10.73.109.176" target="_blank">appointments.mitchell1.com</a>			
@@ -282,8 +316,9 @@
 				<br><a href="https://10.14.128.11/Security/Index.aspx?" target="_blank">www.ownerautosite.com</a>
 				<br><a href="https://10.14.128.13" target="_blank">bridgestoneservice.com</a>
 				<a href="https://10.14.128.12/DataAcquisitionWebService.asmx" target="_blank">DAWS</a>
+				<br>
 				<h3>SANH-IIS-003-SV</h3>
-				<br><a href="https://10.14.128.22" target="_blank">www.m1socialcrm.com</a>
+				<a href="https://10.14.128.22" target="_blank">www.m1socialcrm.com</a>
 				<br><a href="https://10.14.128.27/status" target="_blank">Texting Status</a>
 				<h3>SANH-IIS-005-SV</h3>
 				<a href="https://10.14.129.50/" target="_blank">crm.mitchell1.com</a>
@@ -305,8 +340,9 @@
 				<br><a href="https://10.14.128.11/Security/Index.aspx?" target="_blank">www.ownerautosite.com</a>
 				<br><a href="https://10.14.128.13" target="_blank">bridgestoneservice.com</a>
 				<a href="https://10.14.128.12/DataAcquisitionWebService.asmx" target="_blank">DAWS</a>
+				<br>
 				<h3>SANH-IIS-003-SV</h3>
-				<br><a href="https://10.14.128.22" target="_blank">www.m1socialcrm.com</a>
+				<a href="https://10.14.128.22" target="_blank">www.m1socialcrm.com</a>
 				<br><a href="https://10.14.128.27/status" target="_blank">Texting Status</a>
 				<h3>SANH-IIS-005-SV</h3>
 				<a href="https://10.14.129.50/" target="_blank">crm.mitchell1.com</a>
